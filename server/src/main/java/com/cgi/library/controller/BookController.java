@@ -11,11 +11,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/book")
+@RequestMapping("/api/v1/book")
 public class BookController {
 
     @Autowired
     private BookService bookService;
+
+    @GetMapping(value = "test")
+    public ResponseEntity<String> test() {
+        return ResponseEntity.ok("Test secured endpoint");
+    }
 
     @GetMapping(value = "getBooks")
     public ResponseEntity<Page<BookDTO>> getBooks(Pageable pageable) {
