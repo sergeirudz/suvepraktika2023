@@ -1,10 +1,10 @@
 package com.cgi.library.entity;
 
 import com.cgi.library.model.BookStatus;
+import jakarta.persistence.*;
 import org.hibernate.annotations.Type;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ public class Book {
 
     @Id
     @Column
-    @Type(type="uuid-char")
+//    @Type(type="uuid-char")
     private UUID id;
 
     @Column
