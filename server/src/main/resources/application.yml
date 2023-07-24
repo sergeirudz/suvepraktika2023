@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jwt_security
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+#spring.datasource.url=jdbc:h2:mem:app_db;DB_CLOSE_DELAY=-1
+#spring.datasource.username=sa
+#spring.datasource.password=
+#spring.datasource.driverClassName=org.h2.Driver
+#spring.jpa.hibernate.ddl-auto=update
+#
+
+
+#  spring.jpa.hibernate.ddl-auto=update
+#  spring.jpa.show-sql=true
+#  spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+#  spring.datasource.username=postgres
+#  spring.datasource.password=postgres
+#  spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+#
+#  logging.level.ee.sergei.lemmikloomad=debug
